@@ -20,7 +20,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Helmet
-          title="CoolTable"
+          title={data.site.siteMetadata.title}
           meta={[
             { name: 'description', content: 'Sample' },
             { name: 'keywords', content: 'sample, something' },
@@ -28,7 +28,7 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header siteTitle="CoolTable" />
+        <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
             margin: '0 auto',
